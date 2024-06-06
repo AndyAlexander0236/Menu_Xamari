@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Menu.Views.AboutPage"
+             xmlns:vm="clr-namespace:Menu.ViewModels"
+             Title="Acerca del Aplicativo">
+
+    <ContentPage.BindingContext>
+        <vm:AboutViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Accent">#96d1ff</Color>
+            <Color x:Key="Primary">#3498db</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackLayout BackgroundColor="{StaticResource Accent}" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
+                </ContentView>
+            </StackLayout>
+        </StackLayout>
+        <ScrollView Grid.Row="1">
+            <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
+                <StackLayout Orientation="Vertical" Spacing="10" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                    <Label Text="Bienvenidos" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontSize="Title"/>
+                    <Label Text="al aplicativa" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontSize="16"/>
+                    <Image Source="https://w7.pngwing.com/pngs/170/535/png-transparent-computer-icons-home-house-login-home-angle-rectangle-black-thumbnail.png"
+           HeightRequest="150" WidthRequest="150" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                </StackLayout>
+
+                <Label Text="MI PRIEMR MENU" FontSize="Title"/>
+                <Label Text="en xamari" FontSize="16" Padding="0,0,0,0"/>
+                <Label FontSize="16" Padding="0,24,0,0">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Leer mas acerca de... "/>
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+              
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>
